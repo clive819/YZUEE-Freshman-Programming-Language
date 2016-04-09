@@ -1,1 +1,1 @@
-![Alt text](/Users/Clive/GitHub/YZUEE-Freshman-Programming-Language/2016:03:29/Problem.png?raw=true)
+![Alt text](https://github.com/clive819/YZUEE-Freshman-Programming-Language/blob/master/2016:03:29/Problem.png?raw=true)
