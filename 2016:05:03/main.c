@@ -24,9 +24,9 @@ void multiply(int num){
     }
 }
 
-void guess(){
+int guess(){
     srand(time(0));
-    int mynum = rand()%100+1, num;
+    int mynum = rand()%100+1, num, t=0;
     printf("I have a number between 1 and 100.\nCan you guess my number?\nPlease type your first guess: ");
     scanf("%d", &num);
     while (num != mynum) {
@@ -36,8 +36,10 @@ void guess(){
         else{
             printf("Too low. Try again.\nPlease type your guess: ");
         }
+        t++;
         scanf("%d", &num);
     }
+    return t;
 }
 
 int main(void){
@@ -45,15 +47,13 @@ int main(void){
     printf("Enter a number: ");
     scanf("%d", &num);
     multiply(num);
-    bool play = true;
+    int play = 1;
     while (play) {
-        guess();
-        printf("Excellent! You guessed the number!\nWould you like to play again (1 or 0)? ");
+        int t = guess();
+        printf("Excellent! You guessed the number!\nYou have guessed %d times\nWould you like to play again (1 or 0)? ", t);
         int opt;
         scanf("%d", &opt);
-        if (opt == 0) {
-            play = false;
-        }
+        
     }
 }
 
