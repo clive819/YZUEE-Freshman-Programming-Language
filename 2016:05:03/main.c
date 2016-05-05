@@ -3,11 +3,11 @@
  ID: s1040641
  Date: 2016/05/03
  */
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include <stdio.h> // printf(), scanf()
+#include <stdlib.h> // rand(), srand()
+#include <time.h> //time()
 
-void multiply(int num){
+void multiply(int num){ // 沒有回傳值用void 用int那些也是可拉 沒什麼差 不過建議用void
     if (num == 0) {
         for (int i=1; i<8; i+=3) { //讓i跑1,4,7
             for (int j=1; j<10; j++) { // j跑 1~9
@@ -24,7 +24,7 @@ void multiply(int num){
 }
 
 int guess(){
-    srand(time(0)); //因為rand()亂數你每次程式重跑的話亂數的順序永遠就是那樣 所以你要把亂數打亂 用srand() 然後time(0)自己google 引用time.h才能用time(0)
+    srand(time(0)); //因為rand()亂數你每次程式重跑的話亂數的順序永遠就是那樣 所以你要把亂數打亂 用srand() 然後time(0)自己google 引用time.h才能用time(0) srand的用法也自己估狗＠＠
     int mynum = rand()%100+1, num, t=0; // rand()是亂數產生器 會隨便產生一個亂數 %100的話就是把那個亂數除以100求🐟數 所以會把數字控制在0~99 +1的話就變成1~100
     printf("I have a number between 1 and 100.\nCan you guess my number?\nPlease type your first guess: ");
     scanf("%d", &num);
@@ -47,7 +47,7 @@ int main(void){
     scanf("%d", &num);
     multiply(num);
     int play = 1;
-    while (play) { 
+    while (play) { // 1==true, 0==false 所以就不用再做if條件句判斷 因為如果play變0 就不會達到while的條件 也就是會跳出迴圈
         int t = guess();
         printf("Excellent! You guessed the number!\nYou have guessed %d times\nWould you like to play again (1 or 0)? ", t);
         int opt;
