@@ -50,9 +50,7 @@ int main(void){
     while (play) { // 1==true, 0==false 所以就不用再做if條件句判斷 因為如果play變0 就不會達到while的條件 也就是會跳出迴圈
         int t = guess();
         printf("Excellent! You guessed the number!\nYou have guessed %d times\nWould you like to play again (1 or 0)? ", t);
-        int opt;
-        scanf("%d", &opt);
-        
+        scanf("%d", &play);
     }
 }
 
