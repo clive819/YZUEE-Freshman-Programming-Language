@@ -32,10 +32,7 @@ bool compare(int a[], int b[]){
             rp++;
         }
         for (int j=0; j<4; j++) {
-            if (i==j) {
-                continue;
-            }
-            if (a[i]==b[j]) {
+            if (a[i]==b[j] && i!=j) {
                 rn++;
             }
         }
