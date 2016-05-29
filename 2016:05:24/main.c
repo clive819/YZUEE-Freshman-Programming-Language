@@ -46,7 +46,7 @@ bool compare(int a[], int b[]){
 
 
 int main(){
-    int user_guess[4] = {0}, random_number[4], num;
+    int user_guess[4], random_number[4], num;
     gen_random_number(random_number);
     printf("Enter a 4-digits number: ");
     scanf("%d", &num);
