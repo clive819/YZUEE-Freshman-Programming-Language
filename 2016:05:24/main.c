@@ -54,7 +54,7 @@ int main(){
         user_guess[3-i] = num%10; // 3-i是因為要讓它倒著存 如果沒加的話 假設num=1234 那 user_guess就會是[4,3,2,1] 但是我們要的是 [1,2,3,4] 所以讓他從最後面往前存
         num/=10;
     }
-    while (!compare(user_guess, random_number)) {
+    while (!compare(user_guess, random_number)) { // 在還沒猜對之前都是回傳false 然後「！」代表not的意思 所以 !false == true  所以在猜對之前while的條件都成立 所以會一直在while裡面 
         printf("Enter a 4-digits number: ");
         scanf("%d", &num);
         for (int i=0; i<4; i++) {
